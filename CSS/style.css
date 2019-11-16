@@ -16,7 +16,7 @@ body {
 
 .header {
     width: 100%;
-    height: 61vh;
+    height: 96vh;
     display: block;
     position: relative;
     background-image: url("../img/football_767.jpg");
@@ -47,12 +47,12 @@ body {
 .header-logo {
     width: 135px;
     height: 37px;
-    margin-top: 33px;
+    margin-top: 4vh;
     fill: rgb(255, 255, 255);
 }
 
 .welcome-description {
-    margin-top: 136px;
+    margin-top: 28vh;
     text-align: left;
 }
 
@@ -61,17 +61,19 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
+    margin: 0;
 }
 
 .welcome-title {
     word-wrap: break-word;
     display: block;
-    margin-left: 40px;
-    margin-top: 15px
+    margin-left: 21vw;
+/*    margin-top: 15px*/
 }
 
 .buttons {
-    margin-top: 89px;
+/*    margin-top: 89px;*/
+    margin-top: 10vh;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -120,10 +122,19 @@ body {
     margin-right: 9px;
 }
 
+.athlets-container {
+    text-align: center;
+}
+
+.desc {
+    text-align: left;
+}
+
 .content-picture {
     text-align: center;
     margin-bottom: -50px;
 }
+
 
 .content-title {
     font-size: 50px;
@@ -133,27 +144,35 @@ body {
     margin-bottom: 0;
 }
 
-.players-content > .content:nth-child(3n),
-.athlets-container > .content:nth-child(3n) {
+.players-container {
+    text-align: center;
+}
+
+
+.desc > .content:nth-child(3n+1) {
     background-color: rgb(250, 250, 250);
 }
 
-.players-content > .content:nth-child(3n+1),
-.athlets-container > .content:nth-child(3n+1) {
+.desc > .content:nth-child(3n+2) {
     background-color: rgb(245, 244, 249);
 }
 
-.athlets-container > .content:nth-child(3n+2) {
+.desc > .content:nth-child(3n+3) {
     background-color: rgb(94, 66, 176);
     color: rgb(235, 235, 235);
 }
 
-.players-content > .content:nth-child(3n+2) {
+.players-container .desc > .content:nth-child(3n+3) {
     background-color: rgb(9, 12, 53);
     color: rgb(235, 235, 235);
 }
 
 .content {
+    margin-top: 0;
+    padding: 59px 19px;
+}
+
+.players-content {
     margin-top: 0;
     padding: 59px 19px;
 }
@@ -168,6 +187,18 @@ body {
 
 .title-content {
     display: flex;
+}
+
+.title-players {
+    display: flex;
+}
+
+.players-subtitle {
+    margin-top: 0;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(193, 193, 193);
+    text-transform: uppercase;
 }
 
 .section-number {
@@ -215,6 +246,10 @@ body {
     font-size: 15px;
 }
 
+.text-players {
+    margin: 0;
+    font-size: 15px;
+}
 
 .post-content {
     position: relative;
@@ -358,13 +393,13 @@ body {
 
 @media (min-width: 641px) and (max-width:960px) {
     .header {
-        width: 100%;
         height: 100vh;
         display: block;
         background-image: url("../img/football_1280.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-color: rgb(9, 12, 53);
+        background-position: center;
     }
 
     .header-logo {
@@ -378,8 +413,7 @@ body {
         padding-right: 60px;
     }
 
-    .welcome-description {
-        margin-top: 20%;
+    .welcome-description h1 {
         font-size: 64px;
     }
 
@@ -387,27 +421,23 @@ body {
         margin-top: 0;
     }
 
-    .description {
-        margin-bottom: 0;
-    }
-
-    .button {
-        display: flex;
-
-    }
-    
     .buttons {
+        display: flex;
         flex-direction: row;
     }
-    
+
     .download-app-button:last-of-type {
         margin-left: 30px;
     }
-    
+
     .download-app-button {
         margin-bottom: 0;
     }
-    
+
+    .download-app-button a {
+        font-size: 14px;
+    }
+
     .button-form:last-child {
         margin-right: 0;
     }
@@ -429,7 +459,233 @@ body {
         margin-right: 30px;
     }
 
+    .content {
+        padding: 40px 33px;
+    }
+
+    .content:first-child {
+        padding-top: 0;
+    }
 
 
+    .athlets-container {
+        position: relative;
+        text-align: left;
+    }
+
+    .content-picture {
+        text-align: left;
+        margin-bottom: 0;
+        margin-left: -160px;
+        position: absolute;
+        top: 30px;
+    }
+
+    .players-container .content-picture {
+        top: 0;
+    }
+
+    .title-content,
+    .text-content {
+        width: 59%;
+        margin-left: auto;
+    }
+
+    .players-container .title-content,
+    .players-container .text-content {
+        width: 54%;
+    }
+
+    .text-content {
+        font-size: 16px;
+    }
+
+    .content-title {
+        font-size: 80px;
+        margin-left: 40%;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .players-container .content-title {
+        padding-left: 33px;
+    }
+
+    .section-number {
+        font-size: 18px;
+    }
+
+
+    .section-number::after {
+        content: "";
+        width: 19px;
+        height: 5px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 34px;
+    }
+
+    .players-container {
+        position: relative;
+    }
+
+    .desc-content {
+        text-align: left;
+    }
+
+    .title-players {
+        width: 50%;
+        margin-right: auto;
+    }
+
+    .text-players {
+        width: 50%;
+        margin-right: auto;
+        font-size: 16px;
+    }
+
+    .post-number {
+        font-size: 24px;
+        padding: 42px;
+        margin-left: 32px;
+        margin-top: -76px;
+    }
+
+    .post-number::after {
+        content: "";
+        width: 26px;
+        height: 5px;
+    }
+
+    .post-title {
+        font-size: 80px;
+        margin-bottom: 37px;
+    }
+
+    .post-content {
+        padding-top: 57px;
+    }
+
+    .post-text {
+        font-size: 24px;
+        margin-top: 0;
+    }
+
+    .players-container * {
+        margin-left: 0;
+    }
+
+    .footer-logo {
+        width: 102px;
+        height: 85px;
+    }
+
+    .button-download {
+        padding: 25px 14px;
+        border-radius: 24%;
+    }
+
+    .footer-title {
+        font-size: 80px;
+        margin-bottom: 0;
+    }
+
+    .footer-description {
+        margin-top: 75px;
+    }
+
+    .footer-text {
+        font-size: 36px;
+        margin-top: 0;
+    }
+
+    .footer .buttons {
+        margin: 288px 28px 45px;
+    }
+
+    .footer-logo-text {
+        margin-top: 0;
+        width: 205px;
+        height: 56px;
+    }
+}
+
+@media (min-width: 961px) and (max-width:1920px) {
+    .header {
+        width: 100%;
+/*        height: 100vh;*/
+        background-image: url("../img/football_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgb(9, 12, 53);
+        background-position: center;
+    }
+
+    .container {
+        margin: 0 9.3%;
+    }
+
+
+    .header-logo {
+        width: 190px;
+        height: 54px;
+/*        margin-top: 44px;*/
+    }
+
+    .welcome-description h1 {
+        font-size: 90px;
+/*        margin-top: 18%;*/
+    }
+
+/*
+    .welcome-title {
+        margin-top: 0;
+        margin-left: 430px;
+    }
+*/
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        width: 674px;
+        margin-left: auto;
+        margin-right: auto;
+/*        margin-bottom: 110px;*/
+    }
+
+    .download-app-button:last-of-type {
+        margin-left: 30px;
+    }
+
+    .download-app-button {
+        margin-bottom: 0;
+    }
+
+    .download-app-button a {
+        font-size: 14px;
+    }
+
+    .button-form:last-child {
+        margin-right: 0;
+    }
+
+    .button-header {
+        padding-top: 17px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(94, 66, 176);
+        align-items: center;
+        border: none;
+        border-radius: 52px;
+    }
+
+    .button-logo {
+        width: 38px;
+        height: 45px;
+        margin-right: 30px;
+    }
 
 }
