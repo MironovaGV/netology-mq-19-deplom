@@ -68,11 +68,11 @@ body {
     word-wrap: break-word;
     display: block;
     margin-left: 21vw;
-/*    margin-top: 15px*/
+    /*    margin-top: 15px*/
 }
 
 .buttons {
-/*    margin-top: 89px;*/
+    /*    margin-top: 89px;*/
     margin-top: 10vh;
     text-align: left;
     display: flex;
@@ -281,7 +281,6 @@ body {
 }
 
 .posts-img {
-    max-width: 100%;
     text-align: center;
     background-color: rgb(143, 123, 200);
 }
@@ -391,6 +390,77 @@ body {
     fill: rgb(255, 255, 255);
 }
 
+@media (min-width: 641px) {
+    .buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .athlets-container {
+        position: relative;
+        text-align: left;
+    }
+
+    .content-picture {
+        text-align: left;
+        margin-bottom: 0;
+        position: absolute;
+    }
+
+    .players-container .content-picture {
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+
+    .title-content,
+    .text-content {
+        width: 59%;
+        margin-left: auto;
+    }
+
+    .players-container .title-content,
+    .players-container .text-content {
+        width: 54%;
+    }
+
+    .players-container .content-title {
+        padding-left: 33px;
+    }
+
+    .players-container {
+        position: relative;
+    }
+
+    .desc-content {
+        text-align: left;
+    }
+
+    .title-players {
+        width: 50%;
+        margin-right: auto;
+    }
+
+    .text-players {
+        width: 50%;
+        margin-right: auto;
+    }
+
+    .players-container * {
+        margin-left: 0;
+    }
+
+    .section-number::after {
+        content: "";
+        width: 19px;
+        height: 5px;
+    }
+
+
+
+
+}
+
 @media (min-width: 641px) and (max-width:960px) {
     .header {
         height: 100vh;
@@ -419,11 +489,6 @@ body {
 
     .welcome-title {
         margin-top: 0;
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: row;
     }
 
     .download-app-button:last-of-type {
@@ -467,33 +532,9 @@ body {
         padding-top: 0;
     }
 
-
-    .athlets-container {
-        position: relative;
-        text-align: left;
-    }
-
     .content-picture {
-        text-align: left;
-        margin-bottom: 0;
-        margin-left: -160px;
-        position: absolute;
         top: 30px;
-    }
-
-    .players-container .content-picture {
-        top: 0;
-    }
-
-    .title-content,
-    .text-content {
-        width: 59%;
-        margin-left: auto;
-    }
-
-    .players-container .title-content,
-    .players-container .text-content {
-        width: 54%;
+        left: -155px;
     }
 
     .text-content {
@@ -505,10 +546,6 @@ body {
         margin-left: 40%;
         text-align: left;
         margin-bottom: 30px;
-    }
-
-    .players-container .content-title {
-        padding-left: 33px;
     }
 
     .section-number {
@@ -527,22 +564,12 @@ body {
         margin-bottom: 34px;
     }
 
-    .players-container {
-        position: relative;
-    }
-
     .desc-content {
         text-align: left;
     }
 
-    .title-players {
-        width: 50%;
-        margin-right: auto;
-    }
 
     .text-players {
-        width: 50%;
-        margin-right: auto;
         font-size: 16px;
     }
 
@@ -575,6 +602,10 @@ body {
 
     .players-container * {
         margin-left: 0;
+    }
+    
+    .footer-container {
+        background-image: url(../img/game_1280.jpg);
     }
 
     .footer-logo {
@@ -615,7 +646,7 @@ body {
 @media (min-width: 961px) and (max-width:1920px) {
     .header {
         width: 100%;
-/*        height: 100vh;*/
+
         background-image: url("../img/football_1920.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -631,28 +662,19 @@ body {
     .header-logo {
         width: 190px;
         height: 54px;
-/*        margin-top: 44px;*/
+
     }
 
     .welcome-description h1 {
         font-size: 90px;
-/*        margin-top: 18%;*/
+
     }
 
-/*
-    .welcome-title {
-        margin-top: 0;
-        margin-left: 430px;
-    }
-*/
 
     .buttons {
-        display: flex;
-        flex-direction: row;
         width: 674px;
         margin-left: auto;
         margin-right: auto;
-/*        margin-bottom: 110px;*/
     }
 
     .download-app-button:last-of-type {
@@ -688,4 +710,178 @@ body {
         margin-right: 30px;
     }
 
+    .section-title {
+        font-size: 36px;
+    }
+
+    .section-number {
+        font-size: 18px;
+    }
+
+    .text-content {
+        font-size: 20px;
+    }
+
+    .content-picture {
+        right: 47%;
+    }
+
+    .players-container .content-picture {
+        margin-right: 5%;
+    }
+
+    .content {
+        margin-top: 0;
+        padding-right: 10.3%;
+        padding-left: 10.3%;
+    }
+
+    .title-content,
+    .text-content {
+        width: 40%;
+    }
+
+    .content-title {
+        font-size: 80px;
+        padding-right: 10.3%;
+        padding-left: 10.3%;
+        margin-left: 35%;
+    }
+
+    .players-container {
+        padding-top: 160px;
+    }
+
+    .players-container .content-title {
+        text-align: left;
+        margin: 0;
+        padding-right: 10.3%;
+        padding-left: 10.3%;
+    }
+
+    .post {
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        /*        padding-right: 10.3%;*/
+    }
+
+    .post:nth-child(3n+2) {
+        flex-direction: row-reverse;
+        /*        padding-right: 0;*/
+        /*        padding-left: 10.3%;*/
+    }
+
+    .post-content {
+        flex: 50%;
+        margin: 0;
+        padding: 0;
+        /*
+        width: 60%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        margin-left: 129px;
+*/
+    }
+
+    .post .post-content > * {
+        padding-right: 20.5%;
+        padding-left: 13.4%;
+    }
+
+    .post:nth-child(3n+2) .post-content > * {
+        padding-left: 20.5%;
+        padding-right: 13.4%;
+    }
+
+    .post .post-content .post-title {
+        margin-top: 20%;
+    }
+
+    .posts-img {
+        text-align: center;
+        width: 50%;
+    }
+
+    .posts-img,
+    .posts-img > img {
+        width: 100%;
+        height: 100%;
+        flex: 50%;
+    }
+
+    .post-title {
+        font-size: 80px;
+    }
+
+    .post-text {
+        font-size: 24px;
+    }
+
+    .post-number {
+        top: 35%;
+        left: 46%;
+        font-size: 24px;
+        margin: 0;
+        padding: 3vw 3vw;
+    }
+
+    .post-number::after {
+        content: "";
+        width: 26px;
+        height: 5px;
+    }
+    
+    .footer-container {
+        background-image: url(../img/game_1920.jpg);
+    }
+    
+    .footer-content {
+        padding-top: 220px;
+    }
+
+    .footer-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-header form {
+        margin: auto 0;
+    }
+
+    .footer-description {
+        margin: auto 0;
+        margin-left: 30px;
+    }
+
+    .footer-title {
+        margin: 0;
+        font-size: 80px;
+    }
+
+    .footer-text {
+        margin: 0;
+        font-size: 30px;
+    }
+
+    .button-download {
+        padding: 24px 13px;
+    }
+
+    .footer-logo {
+        width: 105px;
+        height: 85px;
+    }
+    
+    .footer-content .buttons {
+        margin-top: 145px;
+    }
+    
+    .footer-logo-text {
+        margin-top: 253px;
+        margin-bottom: 50px;
+    }
 }
